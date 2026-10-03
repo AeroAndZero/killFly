@@ -305,18 +305,42 @@ public class ScreenshotUploader : MonoBehaviour
 		int offsetX = (outW - renderW) / 2;
 		int offsetY = (outH - renderH) / 2;
 
-		RenderTexture rt = RenderTexture.GetTemporary(renderW, renderH, 24);
+		// Render at the camera's real on-screen size (the case that already works), then shrink on the GPU.
+		RenderTexture full = RenderTexture.GetTemporary(viewW, viewH, 24);
+		full.filterMode = FilterMode.Bilinear;
+		var temps = new List<RenderTexture>();
+
 		RenderTexture prevTarget = cam.targetTexture;
 		RenderTexture prevActive = RenderTexture.active;
 		Rect prevRect = cam.rect;
 
 		try
 		{
-			cam.rect = new Rect(0f, 0f, 1f, 1f);            // a partial viewport rect would also apply inside the texture
-			cam.targetTexture = rt;                         // aspect now matches the on-screen view, so the FOV is identical
+			cam.rect = new Rect(0f, 0f, 1f, 1f);
+			cam.targetTexture = full;
 			cam.Render();
 
-			RenderTexture.active = rt;
+			// Halve while still >= 2x the target: a bilinear sample between 2x2 texels = their average.
+			RenderTexture cur = full;
+			while (cur.width / 2 >= renderW && cur.height / 2 >= renderH)
+			{
+				RenderTexture half = RenderTexture.GetTemporary(cur.width / 2, cur.height / 2, 0);
+				half.filterMode = FilterMode.Bilinear;
+				Graphics.Blit(cur, half);
+				temps.Add(half);
+				cur = half;
+			}
+
+			// Final step to the exact size (less than 2x reduction, so bilinear doesn't skip pixels).
+			if (cur.width != renderW || cur.height != renderH)
+			{
+				RenderTexture exact = RenderTexture.GetTemporary(renderW, renderH, 0);
+				Graphics.Blit(cur, exact);
+				temps.Add(exact);
+				cur = exact;
+			}
+
+			RenderTexture.active = cur;
 			var tex = new Texture2D(outW, outH, TextureFormat.RGB24, false);
 			if (outW != renderW || outH != renderH)
 				tex.SetPixels32(new Color32[outW * outH]);  // black bars
@@ -332,7 +356,8 @@ public class ScreenshotUploader : MonoBehaviour
 			cam.rect = prevRect;
 			cam.targetTexture = prevTarget;
 			RenderTexture.active = prevActive;
-			RenderTexture.ReleaseTemporary(rt);
+			foreach (var t in temps) RenderTexture.ReleaseTemporary(t);
+			RenderTexture.ReleaseTemporary(full);
 		}
 	}
 
@@ -352,8 +377,9 @@ public class ScreenshotUploader : MonoBehaviour
 		}
 
 		// Stop any rotation already in progress so calls don't fight each other
-		if (invisibleCount >= 5 && rotateRoutine == null)
+		if (invisibleCount >= 10)
 		{
+			if (rotateRoutine != null) StopCoroutine(rotateRoutine);
 			Debug.Log("reset to look at the target");
 			RotateYawPitchToward_NoLerp(flyTransform);
 			invisibleCount = 0;
@@ -363,7 +389,7 @@ public class ScreenshotUploader : MonoBehaviour
 			StopCoroutine(rotateRoutine);
 			rotateRoutine = null;
 		}
-		rotateRoutine = StartCoroutine(RotateToLookAt(lookTarget, 0.2f));
+		rotateRoutine = StartCoroutine(RotateToLookAt(lookTarget, 0.3f));
 
 		// Firing State
 		if (jevData.visibles[0].label == "yes"

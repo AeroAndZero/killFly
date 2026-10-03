@@ -163,9 +163,9 @@ MonoBehaviour:
   timeoutSeconds: 10
   reconnectDelaySeconds: 2
   targetCamera: {fileID: 248827524}
-  width: 0
-  height: 0
-  usePng: 1
+  width: 128
+  height: 72
+  usePng: 0
   jpgQuality: 90
   captureInputAction: {fileID: 1775978655597070810, guid: 0f37dcb51f7e1be43b8c82d70f76ff85, type: 3}
   redBall: {fileID: 1771230170}
