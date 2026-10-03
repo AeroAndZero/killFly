@@ -1,0 +1,204 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" authoring-id="-1165872441" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI.uss?fileID=7433441132597879392&amp;guid=02764fc1eacf2c040883c7257cc94585&amp;type=3#UI"/>
+    <ui:VisualElement name="Frame" class="unity-frame">
+        <ui:Image name="PositionBG" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" class="image-position-background">
+            <ui:Label text="Where is the housefly in the image?" class="section-title"/>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                <ui:Label text="Top Left" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pTopLeft" high-value="1" low-value="0" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="topLeft" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="topLeftColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Top Center" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pTopCenter" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="topCenter" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="topCenterColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Top Right" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pTopRight" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="topRight" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="topRightColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Center Left" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pCenterLeft" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="centerLeft" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="centerLeftColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Center" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pCenter" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="center" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="centerColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Center Right" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pCenterRight" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="centerRight" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="centerRightColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Bottom Left" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pBottomLeft" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="bottomLeft" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="bottomLeftColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Bottom Center" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pBottomCenter" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="bottomCenter" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="bottomCenterColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Bottom Right" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pBottomRight" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source-path="bottomRight" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source-path="bottomRightColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+        </ui:Image>
+        <ui:Image name="VisibleBG" class="image-position-background" style="background-color: rgba(123, 89, 43, 0.439);">
+            <ui:Label text="Is the housefly visible?" class="section-title"/>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Yes" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pYes" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="yes" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="yesColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="No" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pNo" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="no" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="noColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+        </ui:Image>
+        <ui:Image name="DistanceBG" class="image-position-background" style="background-color: rgba(161, 95, 102, 0.439);">
+            <ui:Label text="How close is the housefly to the camera?" class="section-title"/>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Very Close" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pVeryClose" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="veryClose" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="veryCloseColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Close" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pClose" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="close" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="closeColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Medium Range" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pMediumRange" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="mediumRange" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="mediumRangeColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Far" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pFar" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="far" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="farColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+            <ui:VisualElement name="progress" class="progress-label-pair" style="flex-grow: 0;">
+                <ui:Label text="Very Far" class="progress-label"/>
+                <ui:ProgressBar value="0" title="" name="pVeryFar" high-value="1" style="width: 50%;">
+                    <Bindings>
+                        <ui:DataBinding property="value" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="veryFar" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:ProgressBar>
+                <Bindings>
+                    <ui:DataBinding property="style.backgroundColor" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="veryFarColor" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:VisualElement>
+        </ui:Image>
+    </ui:VisualElement>
+    <ui:Image name="CounterBG" style="position: absolute; top: 32px; left: 39px; background-color: rgba(0, 0, 0, 0.71); padding-top: 21px; padding-right: 21px; padding-bottom: 21px; padding-left: 21px; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; flex-direction: row;">
+        <ui:Label text="Housefly kill count: " style="position: relative; top: auto; left: auto; font-size: 27px; color: rgb(255, 255, 255); -unity-text-outline-width: 0; text-shadow: 3.9px 1.6px 111.7px rgb(0, 0, 0);"/>
+        <ui:Label text="0" name="killCount" style="position: relative; top: auto; left: auto; font-size: 27px; color: rgb(255, 255, 255); -unity-text-outline-width: 0; text-shadow: 3.9px 1.6px 111.7px rgb(0, 0, 0);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="killCount" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+    </ui:Image>
+    <ui:Image name="FlyKIllAnimation" style="position: absolute; width: 100%; height: 100%; background-color: rgba(66, 255, 101, 0.278); justify-content: center; align-self: center; align-content: center; align-items: center; opacity: 1;">
+        <ui:Label text="Fly Eliminated!" style="align-self: auto; justify-content: flex-start; align-items: auto; align-content: auto; font-size: 67px; -unity-font-style: bold; color: rgb(204, 34, 34);"/>
+        <Bindings>
+            <ui:DataBinding property="style.opacity" data-source="project://database/Assets/Scripts/JevDataSO.asset?fileID=11400000&amp;guid=8028c2c40b6053c468d903b4325ee132&amp;type=2#JevDataSO" data-source-path="killAnimationAlpha" binding-mode="ToTarget"/>
+        </Bindings>
+    </ui:Image>
+</ui:UXML>

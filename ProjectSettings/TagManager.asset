@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Fly
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Room
   - 
   - 
   - 
@@ -43,4 +44,6 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - Room
+  - Player
   m_MigratedRenderPipelines: []

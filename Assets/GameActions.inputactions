@@ -1,0 +1,48 @@
+{
+    "version": 1,
+    "name": "GameActions",
+    "maps": [
+        {
+            "name": "Capture",
+            "id": "676c751f-bf82-4523-a4cc-deb6741fd741",
+            "actions": [
+                {
+                    "name": "CaptureKey",
+                    "type": "Button",
+                    "id": "8c020904-69fd-48e4-9277-13e2f8070139",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0d79b182-820d-417c-aa5c-7f9020490fbd",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CaptureKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "MainScheme",
+            "bindingGroup": "MainScheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

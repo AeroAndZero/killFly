@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd76d2db0cff1844987dd4568c222b10, type: 3}
+  m_Name: JevDataSO
+  m_EditorClassIdentifier: Assembly-CSharp::JevDataSO
+  topLeft: 0.00528281
+  topLeftColor: {r: 0.07746557, g: 0, b: 0, a: 0}
+  topCenter: 0.03444825
+  topCenterColor: {r: 0, g: 0, b: 0, a: 0}
+  topRight: 0.004379603
+  topRightColor: {r: 0, g: 0, b: 0, a: 0}
+  centerLeft: 0.032361135
+  centerLeftColor: {r: 0, g: 0, b: 0, a: 0}
+  center: 0.8346046
+  centerColor: {r: 0, g: 0, b: 0, a: 0}
+  centerRight: 0.05679556
+  centerRightColor: {r: 0, g: 0, b: 0, a: 0}
+  bottomLeft: 0.0059862076
+  bottomLeftColor: {r: 0, g: 0, b: 0, a: 0}
+  bottomCenter: 0.0162722
+  bottomCenterColor: {r: 0, g: 0, b: 0, a: 0}
+  bottomRight: 0.009869588
+  bottomRightColor: {r: 0, g: 0, b: 0, a: 0}
+  yes: 0.9859364
+  yesColor: {r: 0, g: 0, b: 0, a: 0}
+  no: 0.0140636265
+  noColor: {r: 0, g: 0, b: 0, a: 0}
+  veryClose: 0.043125823
+  veryCloseColor: {r: 0, g: 0, b: 0, a: 0}
+  close: 0.21901101
+  closeColor: {r: 0, g: 0, b: 0, a: 0}
+  mediumRange: 0.4935489
+  mediumRangeColor: {r: 0, g: 0, b: 0, a: 0}
+  far: 0.18156652
+  farColor: {r: 0, g: 0, b: 0, a: 0}
+  veryFar: 0.062747695
+  veryFarColor: {r: 0, g: 0, b: 0, a: 0}
+  killCount: 1
+  killAnimationAlpha: 0
